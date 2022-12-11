@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(11, 11, 48);
+}
+
+.container {
+  text-align: center;
+  margin-top: 40vh;
+  font-size: 23px;
+}
+
+.wrapper {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper p {
+  position: relative;
+  display: inline;
+  color: white;
+  z-index: 9999;
+  font-size: 37px;
+  margin-bottom: 120px;
+}
+
+.wrapper p::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(11, 11, 48);
+  z-index: -1;
+  border-radius: 50%;
+  left: -30%;
+  top: -118%;
+  animation-name: shine;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shine {
+  0%,
+  100% {
+    box-shadow: 0px 0px 32px -12px rgba(244, 180, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 32px 3px rgba(244, 180, 0);
+  }
+}
+
+button {
+  background-color: rgb(11, 11, 48);
+  margin-top: 14%;
+  margin-left: 1.9%;
+  margin-right: 2.1%;
+  padding: 20px 45px;
+  border: 1px solid rgba(244, 180, 0);
+  border-radius: 28px;
+  color: white;
+  transition: all 0.2s ease;
+  outline: 0;
+}
+
+button:hover,
+button:focus {
+  border-color: rgba(244, 180, 0);
+  color: rgba(244, 180, 0);
+  box-shadow: 0px 4px 27px -12px rgba(244, 180, 0);
+}
+
+@media screen and (max-width: 700px) {
+  button {
+    margin-top: 30%;
+  }
+}
